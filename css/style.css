@@ -24,12 +24,10 @@ h1 {
   margin: 0 auto;
 }
 .header {
-  height: 100vh;
   background-image: url(../images/background.jpg);
   background-position: center 35px;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 150px;
 }
 .header__top {
   display: flex;
