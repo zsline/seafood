@@ -24,9 +24,9 @@ h1 {
   margin: 0 auto;
 }
 .header {
-  /* height: 100vh; */
+  height: 100vh;
   background-image: url(../images/background.jpg);
-  background-position: center 30px;
+  background-position: center 35px;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 150px;
@@ -59,21 +59,79 @@ h1 {
 }
 .header__title {
   max-width: 590px;
-  margin: 50px 0 0 110px;
+  margin: 120px 0 50px 110px;
+}
+.header-slider {
+  max-width: 510px;
+  padding-left: 110px;
+  padding-top: 50px;
+  padding-bottom: 135px;
 }
 .header-slider__item {
   color: #fff;
-  max-width: 407px;
+  /* max-width: 407px; */
   font-size: 18px;
   line-height: 120%;
 }
-.header-slider__text{
+.header-slider__text {
   margin-bottom: 40px;
 }
 .header__content-btn {
+  display: inline-block;
   padding: 14px 87px;
-  background: #ffffff;
-  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  line-height: 50px;
+  margin-left: 110px;
+  transform: translateY(-125px);
+}
+.slick-btn {
+  position: absolute;
+  left: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+.slick-prev {
+  top: 0;
+}
+.slick-next {
+  bottom: 0;
+}
+.header-slider .slick-dots {
+  position: absolute;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  top: 58px;
+  bottom: 55px;
+  list-style: none;
+  z-index: 1;
+}
+.slick-dots button {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 2px;
+}
+.slick-active button {
+  opacity: 1;
+}
+.slick-dots button::before {
+  content: "0";
+}
+.slick-dots li:nth-child(n + 10) button::before {
+  content: "";
 }
