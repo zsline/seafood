@@ -1,6 +1,9 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #232222;
 }
 a {
   color: #001e64;
@@ -9,7 +12,8 @@ a {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Roboto Slab", serif;
   color: #001e64;
 }
@@ -17,6 +21,18 @@ h1 {
   font-weight: 700;
   font-size: 72px;
   line-height: 95px;
+}
+h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #232222;
+}
+h4 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #001e64;
 }
 .container {
   max-width: 1230px;
@@ -26,7 +42,7 @@ h1 {
 .header {
   height: 100vh;
   background-image: url(../images/background.jpg);
-  background-position: center 35px;
+  background-position: center 30px;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 150px;
@@ -79,7 +95,7 @@ h1 {
 .header__content-btn {
   display: inline-block;
   padding: 14px 87px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
@@ -134,4 +150,77 @@ h1 {
 }
 .slick-dots li:nth-child(n + 10) button::before {
   content: "";
+}
+.product {
+  margin-top: 100px;
+}
+.product__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.product__name {
+  text-align: center;
+  width: 510px;
+  height: 500px;
+  padding: 50px 0;
+}
+.product__name h3 {
+  margin: 15px 0;
+}
+.name-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  /* position: absolute; */
+  margin: 15px 0;
+}
+
+.product__name .slick-current {
+  font-family: Roboto Slab;
+  font-weight: 700;
+  font-size: 36px;
+  color: #001e64;
+}
+.product__name h3{
+  cursor: pointer;
+}
+.product__content {
+  width: 600px;
+}
+.product__content-box {
+  display: flex;
+}
+.product__content-box span {
+  font-family: Roboto Slab;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  color: #001e64;
+}
+.product__content-box p {
+  margin-bottom: 30px;
+}
+.product__content-box img {
+  max-width: 260px;
+  max-height: 222px;
+  margin-right: 40px;
+  margin-bottom: 35px;
+}
+.product__content h4 {
+  margin-bottom: 20px;
+}
+.product__content-btn {
+  font-family: Roboto Slab;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #001e64;
+  padding: 12px 85px;
+  border: 1px solid #001e64;
+  border-radius: 20px;
+  background-color: transparent;
+  margin-top: 26px;
+  cursor: pointer;
 }
