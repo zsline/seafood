@@ -180,7 +180,7 @@ h4 {
   font-size: 36px;
   color: #001e64;
 }
-.product__name h3{
+.product__name h3 {
   cursor: pointer;
 }
 .product__content {
@@ -221,4 +221,91 @@ h4 {
   background-color: transparent;
   margin-top: 26px;
   cursor: pointer;
+}
+.benefits {
+  background-image: url(../images/benefits-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 290px 0 95px;
+}
+.benefits__inner {
+  display: flex;
+  justify-content: space-around;
+}
+.benefits__item {
+  width: 180px;
+  min-height: 165px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  background-image: url(../images/benefits-item.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.seafood {
+  margin: 100px 0;
+}
+.seafood__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+}
+.seafood__item h4 {
+  font-size: 24px;
+  line-height: 120%;
+  max-width: 490px;
+  margin-bottom: 30px;
+}
+.seafood__item p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  max-width: 420px;
+  align-items: start;
+}
+.seafood__item img {
+  max-width: 600px;
+}
+.seafood__quote {
+  max-width: 800px;
+  text-align: center;
+  margin: 50px auto 0;
+}
+.seafood__quote span {
+  max-width: 696px;
+  font-family: Roboto Slab;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.contacts {
+  background-image: url(../images/contacts.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.contacts__box {
+  margin-left: auto;
+  width: 390px;
+  background-color: #fff;
+  padding: 33px 20px;
+}
+.contacts__box-text {
+  font-family: Roboto Slab;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #001e64;
+}
+.contacts__box li{
+margin: 30px 0;
+}
+.contacts__box a{
+  text-transform: lowercase;
 }
