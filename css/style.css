@@ -50,7 +50,8 @@ h4 {
   justify-content: space-between;
   margin-top: 27px;
 }
-.header__top ul, .top-menu ul{
+.header__top ul,
+.top-menu ul {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
@@ -103,6 +104,11 @@ h4 {
   border-radius: 20px;
   margin-left: 110px;
   transform: translateY(-125px);
+  transition: all 0.3s;
+}
+.header__content-btn:hover {
+  color: #001e64;
+  background-color: #fff;
 }
 .slick-btn {
   position: absolute;
@@ -173,8 +179,8 @@ h4 {
   padding: 0;
   /* position: absolute; */
   margin: 15px 0;
+  transition: all 0.3s;
 }
-
 .product__name .slick-current {
   font-family: Roboto Slab;
   font-weight: 700;
@@ -222,6 +228,11 @@ h4 {
   background-color: transparent;
   margin-top: 26px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.product__content-btn:hover {
+  color: #fff;
+  background-color: #001e64;
 }
 .benefits {
   background-image: url(../images/benefits-bg.jpg);
@@ -290,6 +301,7 @@ h4 {
   background-image: url(../images/contacts.jpg);
   background-repeat: no-repeat;
   background-position: bottom left;
+  background-size: cover;
 }
 .contacts__box {
   margin-left: auto;
@@ -304,36 +316,172 @@ h4 {
   line-height: 24px;
   color: #001e64;
 }
-.contacts__box li{
-margin: 30px 0;
+.contacts__box li {
+  margin: 30px 0;
 }
-.contacts__box a{
+.contacts__box a {
   text-transform: lowercase;
 }
-.footer{
+.footer {
   padding: 30px 0 100px;
 }
-.footer__inner{
+.footer__inner {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0 45px 0 22px;
-  color: #232222;
 }
 .footer__inner .top-menu {
   padding-bottom: 32px;
+  color: #232222;
 }
-.footer__social{
+.footer__social {
   display: flex;
   padding-bottom: 25px;
-  
 }
-.footer__social li{
+.footer__social li {
   margin-right: 10px;
 }
-.footer__social li path{
+.footer__social li path {
   transition: all 0.3s;
 }
-.footer__social li:hover path{
+.footer__social li:hover path {
   fill: #001e64;
+}
+.menu__btn {
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 13px 0;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+.menu__btn::after,
+.menu__btn::before {
+  content: "";
+  position: absolute;
+  border-radius: 2px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #001e64;
+}
+.menu__btn::after {
+  bottom: 0;
+}
+.menu__btn::before {
+  top: 0;
+}
+.menu__btn span {
+  display: block;
+  border-radius: 2px;
+  height: 4px;
+
+  background-color: #001e64;
+}
+
+@media (max-width: 1068px) {
+  .top-menu ul {
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: -400px;
+    background-color: #fff;
+    padding-bottom: 50px;
+    flex-direction: column;
+    transition: all 0.3s;
+    z-index: 5;
+  }
+  .top-menu--active ul {
+    top: 10px;
+  }
+  .menu__btn {
+    display: block;
+    z-index: 10;
+    transition: all 0.3s;
+  }
+  .top-menu {
+    margin-left: auto;
+    margin-top: 14px;
+    margin-right: 20px;
+  }
+  .top-menu ul li + li {
+    margin-left: 0px;
+  }
+  .top-menu ul li {
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+@media (max-width: 725px) {
+  .header__title {
+    max-width: 100%;
+    margin: 60px 0 40px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 50px;
+    line-height: 64px;
+  }
+  .top-menu ul {
+    left: 20%;
+    right: 20%;
+  }
+}
+@media (max-width: 470px) {
+  .header-slider {
+    padding-left: 50px;
+  }
+  .header-slider .slick-dots {
+    left: 5px;
+  }
+  header .slick-btn {
+    left: 5px;
+  }
+  .header__content-btn {
+    margin-left: 50px;
+  }
+  h1 {
+    font-size: 34px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 360px) {
+  .header__title {
+    margin: 20px 0 40px;
+  }
+  .header-slider{
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+    .top-menu ul {
+    left: 0;
+    right: 0;
+  }
+  .header-slider__text{
+    margin-bottom: 10px;
+  }
+  .header__content-btn{
+    margin-left: 0;
+    margin-top: 125px;
+    z-index: 20;
+  }
+  .top-menu--active .menu__btn{
+    transform: translateX(50px);
+  }
+  .top-menu--active .menu__btn span{
+    display: none;
+  }
+    .top-menu--active .menu__btn::before{
+    transform: rotate(45deg) translateY(15px);
+  }
+    .top-menu--active .menu__btn::after{
+    transform: rotate(-45deg) translateY(-15px);
+  }
+  .header {
+    background-position: center 50px;
+}
 }

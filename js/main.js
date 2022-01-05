@@ -4,6 +4,17 @@ $(function(){
     prevArrow: '<button type="button" class="slick-prev slick-btn"><img src="../images/prev.svg" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next slick-btn"><img src="../images/next.svg" alt=""></button>',
     vertical: true,
+    responsive: [
+      {
+        breakpoint: 361,
+        settings: {
+          dots: false,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        }
+      },
+    ]
     });
 
   $('.product__name').slick({
@@ -22,5 +33,8 @@ $(function(){
     asNavFor: '.product__name',
     fade: true,
     arrows: false,
+  });
+  $('.menu__btn').on('click', function () {
+    $('.top-menu').toggleClass('top-menu--active');
   });
 });
