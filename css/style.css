@@ -50,19 +50,20 @@ h4 {
   justify-content: space-between;
   margin-top: 27px;
 }
-.header__top ul {
+.header__top ul, .top-menu ul{
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
   font-weight: 500;
+  max-width: 706px;
 }
-.header__top ul li + li {
+.top-menu ul li + li {
   margin-left: 30px;
 }
-.header__top ul li a {
+.top-menu ul li a {
   border-bottom: none;
 }
-.header__top ul li a:hover {
+.top-menu ul li a:hover {
   border-bottom: 2px solid #001e64;
 }
 .phone {
@@ -288,7 +289,7 @@ h4 {
 .contacts {
   background-image: url(../images/contacts.jpg);
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: bottom left;
 }
 .contacts__box {
   margin-left: auto;
@@ -308,4 +309,31 @@ margin: 30px 0;
 }
 .contacts__box a{
   text-transform: lowercase;
+}
+.footer{
+  padding: 30px 0 100px;
+}
+.footer__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 45px 0 22px;
+  color: #232222;
+}
+.footer__inner .top-menu {
+  padding-bottom: 32px;
+}
+.footer__social{
+  display: flex;
+  padding-bottom: 25px;
+  
+}
+.footer__social li{
+  margin-right: 10px;
+}
+.footer__social li path{
+  transition: all 0.3s;
+}
+.footer__social li:hover path{
+  fill: #001e64;
 }
